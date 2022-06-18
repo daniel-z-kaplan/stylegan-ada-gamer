@@ -81,4 +81,3 @@ class _GridSample2dBackward(torch.autograd.Function):
         return grad2_grad_output, grad2_input, grad2_grid
 
 #----------------------------------------------------------------------------
-
