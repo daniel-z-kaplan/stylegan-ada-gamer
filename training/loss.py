@@ -37,7 +37,7 @@ class StyleGAN2Loss(Loss):
         self.G_score = torch.tensor(500.0, requires_grad = False)
         self.D_score = torch.tensor(500.0, requires_grad = False)
         torch.autograd.set_detect_anomaly(True)
-        self.k = k
+
     def run_G(self, z, c, sync):
         with misc.ddp_sync(self.G_mapping, sync):
             ws = self.G_mapping(z, c)
